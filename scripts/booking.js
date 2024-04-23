@@ -19,11 +19,11 @@ let totalElement = document.getElementById("calculated-cost");
 let elements = [fullDay, halfDay, monday, tuesday, wednesday, thursday, friday];
 let days = [monday, tuesday, wednesday, thursday, friday];
 
-days.forEach(day => {
-    if (day) {
-        day.addEventListener('click', changeColour);
+for (var i = 0; i < days.length; i++) {
+    if (days[i]) {
+        days[i].addEventListener('click', changeColour);
     }
-});
+}
 /********* colour change days of week *********/
 // when the day buttons are clicked, we will apply the "clicked" class to that element, and update any other relevant variables. Then, we can recalculate the total cost.
 // added challenge: don't update the dayCounter if the same day is clicked more than once. hint: .classList.contains() might be helpful here!
@@ -43,9 +43,9 @@ function changeColour(event) {
 // when the clear-button is clicked, the "clicked" class is removed from all days, any other relevant variables are reset, and the calculated cost is set to 0.
 reset.addEventListener('click', clearDays);
 function clearDays() {
-    elements.forEach(elements => {
-        elements.classList.remove('clicked');
-    });
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].classList.remove('clicked');
+    }
     numOfDays = 0;
     reCalculate(numOfDays, costPerDay);
 }
