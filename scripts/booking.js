@@ -29,13 +29,15 @@ for (var i = 0; i < days.length; i++) {
 // added challenge: don't update the dayCounter if the same day is clicked more than once. hint: .classList.contains() might be helpful here!
 
 function changeColour(event) {
-    event.target.classList.add('clicked');
-    // Update numOfDays based on the presence of 'clicked' class
+    // Toggle the 'clicked' class
     if (event.target.classList.contains('clicked')) {
-        numOfDays++;
-    } else {
+        event.target.classList.remove('clicked');
         numOfDays--;
+    } else {
+        event.target.classList.add('clicked');
+        numOfDays++;
     }
+    // Recalculate based on the updated number of days
     reCalculate(numOfDays, costPerDay);
 }
 
