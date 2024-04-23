@@ -172,8 +172,9 @@ img {
 .booking-page {
     display: flex;
     flex-direction: column;
-    size: 600px;
+    width: 600px;
     align-items: center;
+    margin: auto;
 }
 
 p {
