@@ -113,11 +113,14 @@ header {
 }
 
 footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin-top: 50px;
-    line-height: 60px;
+    height: 60px;
     font-weight: 200;
     text-align: center;
 }
+
 
 
 /************* index page *************/
@@ -145,7 +148,7 @@ img {
     margin-bottom: 12px;
 }
 
-.fake-button {
+.index .fake-button {
     width: 250px;
     margin-right: 150px;
     margin-left: auto;
@@ -201,7 +204,7 @@ li, .small-button {
     margin-bottom: 12px;
 }
 
-.clear-button {
+#clear-button {
     width: 200px;
 }
 
@@ -217,6 +220,39 @@ li, .small-button {
     - all form input, textarea, and and button elements will have the same font as the rest of the page, a line-height of 24px, a font-size of 16px, and the same border as other buttons on the site. There will be 24px of space below each of these elements.
     - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
 */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    align-items: center;
+}
+
+label {
+    width: 150px;
+    text-align: end;
+    margin-right: 24px;
+}
+
+input {
+    width: 300px;
+}
+
+textarea {
+    height: 150px;
+    width: 300px;
+}
+
+input, textarea, button {
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.contact .fake-button {
+    margin-left: 200px;
+    width: 305px;
+}
 
 
 
